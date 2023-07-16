@@ -109,6 +109,6 @@
         </ul>
     </div>
     <div class="copyright">
-        <p>Developed by Ayondip Jana</p>
+        <p>Developed by Surya Ramesh</p>
     </div>
 </div>

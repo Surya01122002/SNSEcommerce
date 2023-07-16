@@ -407,7 +407,7 @@ if ($h_t == '1973') {
               font-size: 1.2rem;
               color: #6a7187;
             ">
-        @ Developed by Ayondip Jana
+        @ Developed by Surya Ramesh
     </div>
 </div>
 <?php

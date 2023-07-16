@@ -9,54 +9,53 @@
                     <div class="detail">
                         <h5>20% off</h5>
                         <h5>Get it now</h5>
-                        <h5>lorem ispum</h5>
+                        <h5>Limited Stocks Only</h5>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="assets/images/sample/offer-1.jpg" alt="banner" />
+                    <img src="assets/images/sample/offer-2.jpg" alt="banner" />
                     <div class="detail">
                         <h5>20% off</h5>
                         <h5>Get it now</h5>
-                        <h5>lorem ispum</h5>
+                        <h5>Limited Stocks Only</h5>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="assets/images/sample/offer-1.jpg" alt="banner" />
+                    <img src="assets/images/sample/offer-3.jpg" alt="banner" />
                     <div class="detail">
                         <h5>20% off</h5>
                         <h5>Get it now</h5>
-                        <h5>lorem ispum</h5>
+                        <h5>Limited Stocks Only</h5>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="assets/images/sample/offer-1.jpg" alt="banner" />
+                    <img src="assets/images/sample/offer-4.jpg" alt="banner" />
                     <div class="detail">
                         <h5>20% off</h5>
                         <h5>Get it now</h5>
-                        <h5>lorem ispum</h5>
+                        <h5>Limited Stocks Only</h5>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="assets/images/sample/offer-1.jpg" alt="banner" />
+                    <img src="assets/images/sample/offer-5.jpg" alt="banner" />
                     <div class="detail">
                         <h5>20% off</h5>
                         <h5>Get it now</h5>
-                        <h5>lorem ispum</h5>
+                        <h5>Limited Stocks Only</h5>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="assets/images/sample/offer-1.jpg" alt="banner" />
+                    <img src="assets/images/sample/offer-6.jpg" alt="banner"/>
                     <div class="detail">
                         <h5>20% off</h5>
                         <h5>Get it now</h5>
-                        <h5>lorem ispum</h5>
+                        <h5>Limited Stocks Only</h5>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 <section class="defaultPadding mt4">
     <div class="container mrlAuto">
         <div class="heading">
@@ -252,7 +251,7 @@ if (isset($_GET['utm_source']) || isset($_SESSION['utm_source'])) {
                 <div class="row1">
                     <div class="ban">
                         <a href="#">
-                            <img src="assets/images/banner/offer-1.jpg" alt="banner1" />
+                            <img src="assets/images/banner/offer-6.jpg" alt="banner1" />
                         </a>
                     </div>
                     <div class="ban">

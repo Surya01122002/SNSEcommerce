@@ -59,7 +59,7 @@ while ($g = mysqli_fetch_assoc($r)) {
               font-size: 1.2rem;
               color: #6a7187;
             ">
-        @ Developed by Ayondip Jana
+        @ Developed by Surya Ramesh
     </div>
 </div>
 <?php

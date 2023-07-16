@@ -71,7 +71,7 @@ $r1 = mysqli_query($con, $q1);
               font-size: 1.2rem;
               color: #6a7187;
             ">
-        @ Developed by Ayondip Jana
+        @ Developed by Surya Ramesh
     </div>
 </div>
 <?php
