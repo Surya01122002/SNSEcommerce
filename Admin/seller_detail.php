@@ -76,6 +76,12 @@ $is_gst = $row['is_gst'];
                         View PAN
                     </button>
                 </a>
+                <br>
+                <a href="../media/seller_profile/<?php echo $row['family_id']; ?>" target="_blank">
+                    <button class="upw" style="width:14rem;">
+                        View SNS ID
+                    </button>
+                </a>
             </div>
         </div>
         <div class="wrap">

@@ -233,13 +233,13 @@ if (!isset($_SESSION['IS_LOGIN_ADMIN'])) {
 
                         </li>
                     </a>
-                    <a href="deliveryboy.php">
+                    <!-- <a href="deliveryboy.php">
                         <li>
                             <i class="fa fa-user" aria-hidden="true"></i>
                             &nbsp;Delivery Boy
 
                     </li>
-                </a>
+                </a> -->
                 <a href="incompleteorder.php">
                     <li>
                     <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
@@ -401,13 +401,13 @@ if (!isset($_SESSION['IS_LOGIN_ADMIN'])) {
 
                         </li>
                     </a>
-                    <a href="addDeliveryBoy.php">
+                    <!-- <a href="addDeliveryBoy.php">
                         <li>
                             <i class="fa fa-hourglass-start" aria-hidden="true"></i>
                             &nbsp;Add Delivery Boy
 
                         </li>
-                    </a>
+                    </a> -->
                 </ul>
             </div>
             <div class="workspace">
