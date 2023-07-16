@@ -241,6 +241,9 @@ function completep(rt) {
       email,
       mobile,
       address,
+      familydetail,
+      clg_name,
+      clg_reg_number,
       type,
       bname,
       bcrft,
@@ -257,11 +260,15 @@ function completep(rt) {
       branch,
       ifsc,
       adhar,
-      pan;
+      pan,
+      family_id;
     fullname = control.getInput("seller_full_name");
     email = control.getInput("email");
     mobile = control.getInput("mobile");
     address = control.getInput("address");
+    familydetail = control.getInput("familydetail");
+    clg_name = control.getInput("seller_clg_name");
+    clg_reg_number = control.getInput("seller_clg_reg_number");
     type = control.getInput("seller_b_type");
     bname = control.getInput("seller_b_name");
     bcrft = document.getElementById("seller_b_crft");
@@ -277,6 +284,7 @@ function completep(rt) {
     ifsc = control.getInput("seller_ifsc");
     adhar = document.getElementById("seller_adhar");
     pan = document.getElementById("seller_pan");
+    family_id = document.getElementById("seller_family_id");
     if (fullname == "") {
       control.html("pdstatus", "Enter Full Name");
     } else if (email == "") {
@@ -285,6 +293,12 @@ function completep(rt) {
       control.html("pdstatus", "Enter mobile");
     } else if (address == "") {
       control.html("pdstatus", "enter address");
+    } else if (familydetail == "") {
+      control.html("pdstatus", "Select Relationship");
+    } else if (clg_name == "") {
+      control.html("pdstatus", "Enter College Name");
+    } else if (clg_reg_number == "") {
+      control.html("pdstatus", "Enter College ID");
     } else if (type == "#") {
       control.html("pdstatus", "Select Business Type");
     } else if (bname == "") {
@@ -323,6 +337,8 @@ function completep(rt) {
         control.html("pdstatus", "Choose Adhar card");
       } else if (pan.files.length == 0) {
         control.html("pdstatus", "Choose Pan Card");
+      } else if (family_id.files.length == 0) {
+        control.html("pdstatus", "Choose Family ID Card");
       } else {
         add_details();
       }
@@ -419,6 +435,7 @@ function add_adhar(bc, gstc) {
 }
 function add_pan(bc, gstc, adhar) {
   control.html("pdstatus", "Adding PAN...");
+  console.log("Here done");
   var fd = new FormData();
   var files = $("#seller_pan")[0].files;
   fd.append("file", files[0]);
@@ -433,17 +450,43 @@ function add_pan(bc, gstc, adhar) {
         control.html("pdstatus", html);
       } else {
         control.html("pdstatus", "PAN Added..");
-        add_r_d(bc, gstc, adhar, html);
+        add_familyid(bc, gstc, adhar, html);
       }
     },
   });
 }
-function add_r_d(bc, gstc, adhar, pan) {
+function add_familyid(bc, gstc, adhar, pan) {
+  console.log("called");
+  control.html("pdstatus", "Adding Family ID...");
+  var fid = new FormData();
+  var files = $("#seller_family_id")[0].files;
+  fid.append("file", files[0]);
+  $.ajax({
+    url: "assets/backend/profile/addfamilyid.php",
+    type: "post",
+    data: fid,
+    contentType: false,
+    processData: false,
+    success: function (html) {
+      if (html == "Format of Family ID Card Is Not supported") {
+        control.html("pdstatus", html);
+      } else {
+        control.html("pdstatus", "Family ID Added..");
+        console.log("here");
+        add_r_d(bc, gstc, adhar, pan, html);
+      }
+    },
+  });
+}
+function add_r_d(bc, gstc, adhar, pan, family_id) {
   control.html("pdstatus", "Adding Details...");
   let fullname,
     email,
     mobile,
     address,
+    familydetail,
+    clg_name,
+    clg_reg_number,
     type,
     bname,
     cntry,
@@ -460,6 +503,9 @@ function add_r_d(bc, gstc, adhar, pan) {
   email = control.getInput("email");
   mobile = control.getInput("mobile");
   address = control.getInput("address");
+  familydetail = control.getInput("familydetail");
+  clg_name = control.getInput("seller_clg_name");
+  clg_reg_number = control.getInput("seller_clg_reg_number");
   fullname = control.getInput("seller_full_name");
   type = control.getInput("seller_b_type");
   bname = control.getInput("seller_b_name");
@@ -484,6 +530,12 @@ function add_r_d(bc, gstc, adhar, pan) {
     data:
       "fullname=" +
       fullname +
+      "&familydetail=" +
+      familydetail +
+      "&clg_name=" +
+      clg_name +
+      "&clg_reg_number=" +
+      clg_reg_number +
       "&type=" +
       type +
       "&bname=" +
@@ -518,6 +570,8 @@ function add_r_d(bc, gstc, adhar, pan) {
       adhar +
       "&pan=" +
       pan +
+      "&family_id=" +
+      family_id +
       "&email=" +
       email +
       "&address=" +

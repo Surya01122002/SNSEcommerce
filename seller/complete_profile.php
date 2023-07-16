@@ -18,6 +18,9 @@ $cntry = '';
 $state = '';
 $city = '';
 $pin = '';
+$is_family = '';
+$seller_clg_name = '';
+$seller_clg_reg_number = '';
 $is_gst = '';
 $gstnum = '';
 $acn = '';
@@ -29,6 +32,7 @@ $b_sc = "../assets/images/product/big-2.jpg";
 $g_sc = "../assets/images/product/big-2.jpg";
 $a_sc = "../assets/images/product/big-2.jpg";
 $p_sc = "../assets/images/product/big-2.jpg";
+$family_sc = "../assets/images/product/big-2.jpg";
 $query = "select * from sellers where id='$sid'";
 $seller_res = mysqli_query($con, $query);
 $seller_row = mysqli_fetch_assoc($seller_res);
@@ -61,6 +65,9 @@ if ($is_approve == 2 && $cp == 2 || isset($_GET['rt'])) {
     if (!empty($seller_row['pan'])) {
         $p_sc = "../media/seller_profile/" . $seller_row['pan'];
     }
+    if (!empty($seller_row['familyid'])) {
+        $family_sc = "../media/seller_profile/" . $seller_row['familyid'];
+    }
 }
 ?>
 <div class="path">
@@ -80,20 +87,47 @@ if ($is_approve == 2 && $cp == 2 || isset($_GET['rt'])) {
                 <h1 style="color:#556ee6" class="mt3">Basic Details</h1>
                 <div class="formrow">
                     <div class="heading">Full Name</div>
-                    <input type="text" placeholder="Enter Your Full Name" id="seller_full_name" value="<?php echo $fullname; ?>">
+                    <input type="text" placeholder="Enter Your Full Name" id="seller_full_name"
+                        value="<?php echo $fullname; ?>">
                 </div>
                 <div class="formrow">
                     <div class="heading">Email</div>
-                    <input type="email" placeholder="Enter Email Id" id="email" value="<?php echo $seller_row['email']; ?>">
+                    <input type="email" placeholder="Enter Email Id" id="email"
+                        value="<?php echo $seller_row['email']; ?>">
                 </div>
                 <div class="formrow">
                     <div class="heading">Mobile </div>
-                    <input type="text" placeholder="Enter Mobile Number" id="mobile" value="<?php echo $seller_row['mobile']; ?>">
+                    <input type="text" placeholder="Enter Mobile Number" id="mobile"
+                        value="<?php echo $seller_row['mobile']; ?>">
                 </div>
                 <div class="formrow">
                     <div class="heading">Address </div>
-                    <input type="text" placeholder="Enter Mobile Number" id="address" value="<?php echo $seller_row['address']; ?>">
+                    <input type="text" placeholder="Enter Address" id="address"
+                        value="<?php echo $seller_row['address']; ?>">
                 </div>
+                <h1 style="color:#556ee6" class="mt3">SNS Family Relationship</h1>
+                <div class="formrow">
+                    <div class="heading">Relationship</div>
+                    <?php if ($city == '') { ?>
+                    <select class="select" id="familydetail" style="margin:1rem 0 0 0;" onchange="">
+                        <option value="#">Select Your Relationship</option>
+                        <option value="1">Current Student / Family of Current Student</option>
+                        <option value="2">Current Staff / Family of Current Staff</option>
+                        <option value="3">Alumni / Family of Alumni</option>
+                    </select>
+                    <?php } else {} ?>
+                </div>
+                <div class="formrow">
+                    <div class="heading">College Name</div>
+                    <input type="text" placeholder="Enter Your College Name" id="seller_clg_name"
+                        value="<?php echo $seller_clg_name; ?>">
+                </div>
+                <div class="formrow">
+                    <div class="heading">Register Number / Employment Number / Alumni Enrolment Number </div>
+                    <input type="text" placeholder="Enter Your Enrolment / Employment Number" id="seller_clg_reg_number"
+                        value="<?php echo $seller_clg_reg_number; ?>">
+                </div>
+
                 <h1 style="color:#556ee6" class="mt3">Business Details</h1>
                 <div class="formrow">
                     <div class="heading">Type</div>
@@ -105,17 +139,18 @@ if ($is_approve == 2 && $cp == 2 || isset($_GET['rt'])) {
                         while ($rowi = mysqli_fetch_assoc($resi)) {
                             if ($rowi['id'] == $type) {
                         ?>
-                                <option value="<?php echo $rowi['id']; ?>" selected><?php echo $rowi['type']; ?>
-                                </option>
-                            <?php } else { ?>
-                                <option value="<?php echo $rowi['id']; ?>"><?php echo $rowi['type']; ?></option>
+                        <option value="<?php echo $rowi['id']; ?>" selected><?php echo $rowi['type']; ?>
+                        </option>
+                        <?php } else { ?>
+                        <option value="<?php echo $rowi['id']; ?>"><?php echo $rowi['type']; ?></option>
                         <?php }
                         } ?>
                     </select>
                 </div>
                 <div class="formrow">
                     <div class="heading">Business name</div>
-                    <input type="text" placeholder="Enter Your Business Name" id="seller_b_name" value="<?php echo $bname; ?>">
+                    <input type="text" placeholder="Enter Your Business Name" id="seller_b_name"
+                        value="<?php echo $bname; ?>">
                 </div>
                 <div class="formrow">
                     <div class="heading">Country</div>
@@ -127,10 +162,10 @@ if ($is_approve == 2 && $cp == 2 || isset($_GET['rt'])) {
                         while ($row = mysqli_fetch_assoc($res)) {
                             if ($row['id'] == $cntry) {
                         ?>
-                                <option value="<?php echo $row['id']; ?>" selected><?php echo $row['cntry_name']; ?>
-                                </option>
-                            <?php } else { ?>
-                                <option value="<?php echo $row['id']; ?>"><?php echo $row['cntry_name']; ?></option>
+                        <option value="<?php echo $row['id']; ?>" selected><?php echo $row['cntry_name']; ?>
+                        </option>
+                        <?php } else { ?>
+                        <option value="<?php echo $row['id']; ?>"><?php echo $row['cntry_name']; ?></option>
                         <?php }
                         } ?>
                     </select>
@@ -138,122 +173,128 @@ if ($is_approve == 2 && $cp == 2 || isset($_GET['rt'])) {
                 <div class="formrow">
                     <div class="heading">State</div>
                     <?php if ($state == '') { ?>
-                        <select class="select" id="fscb" style="margin:1rem 0 0 0;" onchange="getcitylist()">
-                            <option value="#">Select State</option>
-                        </select>
+                    <select class="select" id="fscb" style="margin:1rem 0 0 0;" onchange="getcitylist()">
+                        <option value="#">Select State</option>
+                    </select>
                     <?php } else { ?>
-                        <select class="select" id="fscb" style="margin:1rem 0 0 0;" onchange="getcitylist()">
-                            <?php
+                    <select class="select" id="fscb" style="margin:1rem 0 0 0;" onchange="getcitylist()">
+                        <?php
                             $querys = "select * from state where c_id='$cntry' order by id desc";
                             $ress = mysqli_query($con, $querys);
                             while ($rows = mysqli_fetch_assoc($ress)) {
                                 if ($rows['id'] == $state) {
                             ?>
-                                    <option value="<?php echo $rows['id']; ?>" selected><?php echo $rows['state_name']; ?>
-                                    </option>
-                                <?php } else { ?>
-                                    <option value="<?php echo $rows['id']; ?>"><?php echo $rows['state_name']; ?></option>
-                            <?php }
+                        <option value="<?php echo $rows['id']; ?>" selected><?php echo $rows['state_name']; ?>
+                        </option>
+                        <?php } else { ?>
+                        <option value="<?php echo $rows['id']; ?>"><?php echo $rows['state_name']; ?></option>
+                        <?php }
                             } ?>
-                        </select>
+                    </select>
                     <?php } ?>
                 </div>
                 <div class="formrow">
                     <div class="heading">City</div>
                     <?php if ($city == '') { ?>
-                        <select class="select" id="fscb2" style="margin:1rem 0 0 0;" onchange="getpinlist()">
-                            <option value="#">Select City</option>
-                        </select>
+                    <select class="select" id="fscb2" style="margin:1rem 0 0 0;" onchange="getpinlist()">
+                        <option value="#">Select City</option>
+                    </select>
                     <?php } else { ?>
-                        <select class="select" id="fscb2" style="margin:1rem 0 0 0;" onchange="getcitylist()">
-                            <?php
+                    <select class="select" id="fscb2" style="margin:1rem 0 0 0;" onchange="getcitylist()">
+                        <?php
                             $querys = "select * from city where s_id='$state' order by id desc";
                             $ress = mysqli_query($con, $querys);
                             while ($rows = mysqli_fetch_assoc($ress)) {
                                 if ($rows['id'] == $state) {
                             ?>
-                                    <option value="<?php echo $rows['id']; ?>" selected><?php echo $rows['city_name']; ?>
-                                    </option>
-                                <?php } else { ?>
-                                    <option value="<?php echo $rows['id']; ?>"><?php echo $rows['city_name']; ?></option>
-                            <?php }
+                        <option value="<?php echo $rows['id']; ?>" selected><?php echo $rows['city_name']; ?>
+                        </option>
+                        <?php } else { ?>
+                        <option value="<?php echo $rows['id']; ?>"><?php echo $rows['city_name']; ?></option>
+                        <?php }
                             } ?>
-                        </select>
+                    </select>
                     <?php } ?>
                 </div>
                 <div class="formrow">
                     <div class="heading">Pincode</div>
                     <?php if ($city == '') { ?>
-                        <select class="select" id="fscb3" style="margin:1rem 0 0 0;">
-                            <option value="#">Select Pincode</option>
-                        </select>
+                    <select class="select" id="fscb3" style="margin:1rem 0 0 0;">
+                        <option value="#">Select Pincode</option>
+                    </select>
                     <?php } else { ?>
-                        <select class="select" id="fscb3" style="margin:1rem 0 0 0;" onchange="getcitylist()">
-                            <?php
+                    <select class="select" id="fscb3" style="margin:1rem 0 0 0;" onchange="getcitylist()">
+                        <?php
                             $querys = "select * from pin where c_id='$city' order by id desc";
                             $ress = mysqli_query($con, $querys);
                             while ($rows = mysqli_fetch_assoc($ress)) {
                                 if ($rows['id'] == $pin) {
                             ?>
-                                    <option value="<?php echo $rows['id']; ?>" selected><?php echo $rows['pincode']; ?>
-                                    </option>
-                                <?php } else { ?>
-                                    <option value="<?php echo $rows['id']; ?>"><?php echo $rows['pincode']; ?></option>
-                            <?php }
+                        <option value="<?php echo $rows['id']; ?>" selected><?php echo $rows['pincode']; ?>
+                        </option>
+                        <?php } else { ?>
+                        <option value="<?php echo $rows['id']; ?>"><?php echo $rows['pincode']; ?></option>
+                        <?php }
                             } ?>
-                        </select>
+                    </select>
                     <?php } ?>
                 </div>
                 <div class="formrow">
                     <div class="heading">GST</div>
                     <?php if ($is_gst == '') { ?>
-                        <select class="select" name="addscatname" id="isgst" onchange="is_gst()">
-                            <option value="#">Select GST</option>
-                            <option value="1">Yes</option>
-                            <option value="2">No</option>
-                        </select>
+                    <select class="select" name="addscatname" id="isgst" onchange="is_gst()">
+                        <option value="#">Select GST</option>
+                        <option value="1">Yes</option>
+                        <option value="2">No</option>
+                    </select>
                     <?php } else { ?>
 
-                        <?php if ($is_gst == 1) { ?>
-                            <select class="select" name="addscatname" id="isgst" onchange="is_gst()">
-                                <option value="1" selected>Yes</option>
-                                <option value="2">No</option>
-                            </select>
-                        <?php } else { ?>
-                            <select class="select" name="addscatname" id="isgst" onchange="is_gst()">
-                                <option value="1">Yes</option>
-                                <option value="2" selected>No</option>
-                            </select>
+                    <?php if ($is_gst == 1) { ?>
+                    <select class="select" name="addscatname" id="isgst" onchange="is_gst()">
+                        <option value="1" selected>Yes</option>
+                        <option value="2">No</option>
+                    </select>
+                    <?php } else { ?>
+                    <select class="select" name="addscatname" id="isgst" onchange="is_gst()">
+                        <option value="1">Yes</option>
+                        <option value="2" selected>No</option>
+                    </select>
                     <?php }
                     } ?>
                 </div>
                 <?php if ($is_gst == '' || $is_gst == 2) { ?>
-                    <div class="formrow" id='isgst1' style="display:none;">
-                        <div class="heading">GST Number</div>
-                        <input type="text" placeholder="Enter GST number *" id="seller_gst_num" value="<?php echo $gstnum; ?>" />
-                    </div>
+                <div class="formrow" id='isgst1' style="display:none;">
+                    <div class="heading">GST Number</div>
+                    <input type="text" placeholder="Enter GST number *" id="seller_gst_num"
+                        value="<?php echo $gstnum; ?>" />
+                </div>
                 <?php } else if ($is_gst == 1) { ?>
-                    <div class="formrow" id='isgst1'>
-                        <div class="heading">GST Number</div>
-                        <input type="text" placeholder="Enter GST number *" id="seller_gst_num" value="<?php echo $gstnum; ?>" />
-                    </div>
+                <div class="formrow" id='isgst1'>
+                    <div class="heading">GST Number</div>
+                    <input type="text" placeholder="Enter GST number *" id="seller_gst_num"
+                        value="<?php echo $gstnum; ?>" />
+                </div>
                 <?php } ?>
                 <h1 style="color:#556ee6" class="mt3">Bank Details</h1>
                 <div class="formrow">
                     <div class="heading">Account Number</div>
-                    <input type="number" placeholder="Enter bank account number *" id="seller_ac" value="<?php echo $acn; ?>" />
+                    <input type="number" placeholder="Enter bank account number *" id="seller_ac"
+                        value="<?php echo $acn; ?>" />
                 </div>
                 <div class="formrow">
                     <div class="heading">Account Holder's Name</div>
-                    <input type="text" id="seller_bank_holder" placeholder="Enter account holder's name *" value="<?php echo $ach; ?>" />
+                    <input type="text" id="seller_bank_holder" placeholder="Enter account holder's name *"
+                        value="<?php echo $ach; ?>" />
                 </div>
                 <div class="formrow">
                     <div class="heading">Bank Name</div>
-                    <input type="text" id="seller_bank_name" placeholder="Enter bank name *" value="<?php echo $bank; ?>" />
+                    <input type="text" id="seller_bank_name" placeholder="Enter bank name *"
+                        value="<?php echo $bank; ?>" />
                 </div>
                 <div class="formrow">
                     <div class="heading">Branch Name</div>
-                    <input type="text" id="seller_branch_name" placeholder="Enter Branch name *" value="<?php echo $branch; ?>" />
+                    <input type="text" id="seller_branch_name" placeholder="Enter Branch name *"
+                        value="<?php echo $branch; ?>" />
                 </div>
                 <div class="formrow">
                     <div class="heading">IFSC code</div>
@@ -268,8 +309,9 @@ if ($is_approve == 2 && $cp == 2 || isset($_GET['rt'])) {
                         </div>
                         <div class="file">
                             <label for="seller_adhar">
-                                Adhar
-                                <input type="file" name="productimage1" id="seller_adhar" onchange="show_preview('preview1','seller_adhar')" />
+                                Aadhaar
+                                <input type="file" name="productimage1" id="seller_adhar"
+                                    onchange="show_preview('preview1','seller_adhar')" />
                             </label>
                         </div>
                     </div>
@@ -280,7 +322,8 @@ if ($is_approve == 2 && $cp == 2 || isset($_GET['rt'])) {
                         <div class="file">
                             <label for="seller_pan">
                                 Pan
-                                <input type="file" name="productimage2" id="seller_pan" onchange="show_preview('preview2','seller_pan')" />
+                                <input type="file" name="productimage2" id="seller_pan"
+                                    onchange="show_preview('preview2','seller_pan')" />
                             </label>
                         </div>
                     </div>
@@ -291,36 +334,51 @@ if ($is_approve == 2 && $cp == 2 || isset($_GET['rt'])) {
                         <div class="file">
                             <label for="seller_b_crft">
                                 Business Certificate
-                                <input type="file" name="productimage3" id="seller_b_crft" onchange="show_preview('preview3','seller_b_crft')" />
+                                <input type="file" name="productimage3" id="seller_b_crft"
+                                    onchange="show_preview('preview3','seller_b_crft')" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="imgdiv">
+                        <div class="img">
+                            <img src="<?php echo $family_sc; ?>" alt="" id="preview5" />
+                        </div>
+                        <div class="file">
+                            <label for="seller_family_id">
+                                SNS Family ID
+                                <input type="file" name="productimage5" id="seller_family_id"
+                                    onchange="show_preview('preview5','seller_family_id')" />
                             </label>
                         </div>
                     </div>
                     <?php echo $is_gst;
                     if ($is_gst == '' || $is_gst == 2) { ?>
-                        <div class="imgdiv" id="isgst2" style="display:none">
-                            <div class="img">
-                                <img src="<?php echo $g_sc; ?>" alt="" id="preview4" />
-                            </div>
-                            <div class="file">
-                                <label for="seller_gst_crft">
-                                    Gst Proof
-                                    <input type="file" name="productimage4" id="seller_gst_crft" onchange="show_preview('preview4','seller_gst_crft')" />
-                                </label>
-                            </div>
+                    <div class="imgdiv" id="isgst2" style="display:none">
+                        <div class="img">
+                            <img src="<?php echo $g_sc; ?>" alt="" id="preview4" />
                         </div>
+                        <div class="file">
+                            <label for="seller_gst_crft">
+                                Gst Proof
+                                <input type="file" name="productimage4" id="seller_gst_crft"
+                                    onchange="show_preview('preview4','seller_gst_crft')" />
+                            </label>
+                        </div>
+                    </div>
                     <?php } else if ($is_gst == 1) {
                     ?>
-                        <div class="imgdiv" id="isgst2">
-                            <div class="img">
-                                <img src="<?php echo $g_sc; ?>" alt="" id="preview4" />
-                            </div>
-                            <div class="file">
-                                <label for="seller_gst_crft">
-                                    Gst Proof
-                                    <input type="file" name="productimage4" id="seller_gst_crft" onchange="show_preview('preview4','seller_gst_crft')" />
-                                </label>
-                            </div>
+                    <div class="imgdiv" id="isgst2">
+                        <div class="img">
+                            <img src="<?php echo $g_sc; ?>" alt="" id="preview4" />
                         </div>
+                        <div class="file">
+                            <label for="seller_gst_crft">
+                                Gst Proof
+                                <input type="file" name="productimage4" id="seller_gst_crft"
+                                    onchange="show_preview('preview4','seller_gst_crft')" />
+                            </label>
+                        </div>
+                    </div>
                     <?php
                     } ?>
                 </div>
@@ -330,7 +388,8 @@ if ($is_approve == 2 && $cp == 2 || isset($_GET['rt'])) {
                     </span>
                 </div>
                 <div class="formrow">
-                    <a href="javascript:void(0)" class="btn d-flex-center-a-j bg-main br-15" onclick="completep(<?php echo $rt; ?>)">
+                    <a href="javascript:void(0)" class="btn d-flex-center-a-j bg-main br-15"
+                        onclick="completep(<?php echo $rt; ?>)">
                         <i class="uil uil-plus"></i>
                         <span>Add</span>
                     </a>

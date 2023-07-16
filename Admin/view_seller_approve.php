@@ -30,7 +30,8 @@ $is_gst = $row['is_gst'];
                 <h2>Business address</h2>
                 <br>
                 <p>
-                    <?php echo $row['cntry_name']; ?>, <?php echo $row['state_name']; ?>, <?php echo $row['city_name']; ?>,
+                    <?php echo $row['cntry_name']; ?>, <?php echo $row['state_name']; ?>,
+                    <?php echo $row['city_name']; ?>,
                     <?php echo $row['pincode']; ?>
                 </p>
             </div>
@@ -49,11 +50,11 @@ $is_gst = $row['is_gst'];
                     </button>
                 </a>
                 <?php if ($is_gst == 1) {  ?>
-                    <a href="../media/seller_profile/<?php echo $row['gst_crft']; ?>" target="_blank">
-                        <button class="upw" style="width:14rem;">
-                            View GST Proof
-                        </button>
-                    </a>
+                <a href="../media/seller_profile/<?php echo $row['gst_crft']; ?>" target="_blank">
+                    <button class="upw" style="width:14rem;">
+                        View GST Proof
+                    </button>
+                </a>
                 <?php } ?>
                 <br>
                 <a href="../media/seller_profile/<?php echo $row['adhar']; ?>" target="_blank">
@@ -67,11 +68,17 @@ $is_gst = $row['is_gst'];
                         View PAN
                     </button>
                 </a>
+                <a href="../media/seller_profile/<?php echo $row['family_id']; ?>" target="_blank">
+                    <button class="upw" style="width:14rem;">
+                        View SNS ID Card
+                    </button>
+                </a>
             </div>
         </div>
     </div>
 
-    <textarea name="" id="rejection" style="width:99%;resize:none;padding:1.5rem;outline:none;" rows="8" placeholder="In case of rejection plese specify the reason"></textarea>
+    <textarea name="" id="rejection" style="width:99%;resize:none;padding:1.5rem;outline:none;" rows="8"
+        placeholder="In case of rejection plese specify the reason"></textarea>
     <div class="row_a">
         <button class="upw" style="width:14rem;" onclick="approve_seller('<?php echo $row['id'] ?>')">
             <i class="fa fa-check-circle-o" aria-hidden="true"></i>
@@ -89,7 +96,7 @@ $is_gst = $row['is_gst'];
               font-size: 1.2rem;
               color: #6a7187;
             ">
-        @ Developed by Surya Ramesh
+        @ Developed by Ayondip Jana
     </div>
 </div>
 <?php
