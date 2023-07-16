@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="assets/images/sample/offer-6.jpg" alt="banner"/>
+                    <img src="assets/images/sample/offers-6.jpg" alt="banner"/>
                     <div class="detail">
                         <h5>20% off</h5>
                         <h5>Get it now</h5>
@@ -251,7 +251,7 @@ if (isset($_GET['utm_source']) || isset($_SESSION['utm_source'])) {
                 <div class="row1">
                     <div class="ban">
                         <a href="#">
-                            <img src="assets/images/banner/offer-6.jpg" alt="banner1" />
+                            <img src="assets/images/banner/offers-6.jpg" alt="banner1" />
                         </a>
                     </div>
                     <div class="ban">
