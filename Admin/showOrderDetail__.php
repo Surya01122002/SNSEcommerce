@@ -134,7 +134,7 @@ $sellerInfo = array();
                                                             <button style="
                                                     border-radius: 4px;
                                                     padding: 0.8rem;
-                                                    background-color: #556ee6;
+                                                    background-color: #ff8a00;
                                                     color: #fff;
                                                     float: right;
                                                     " onclick="finalizewithuser(<?php echo $oid; ?>)">Finalize</button>
@@ -145,7 +145,7 @@ $sellerInfo = array();
                                                             <button style="
                                                     border-radius: 4px;
                                                     padding: 0.8rem;
-                                                    background-color: #556ee6;
+                                                    background-color: #ff8a00;
                                                     color: #fff;
                                                     float: right;
                                                     " onclick="finalize(<?php echo $oid; ?>)">Finalize</button>

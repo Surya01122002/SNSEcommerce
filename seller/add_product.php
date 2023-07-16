@@ -25,10 +25,10 @@ $rday = '';
 $return_p = '';
 $repref = '';
 $sku = get_code();
-$img1 = "../assets/images/product/big-2.jpg";
-$img2 = "../assets/images/product/big-2.jpg";
-$img3 = "../assets/images/product/big-2.jpg";
-$img4 = "../assets/images/product/big-2.jpg";
+$img1 = "../assets/images/product/big-snslogo.png";
+$img2 = "../assets/images/product/big-snslogo.png";
+$img3 = "../assets/images/product/big-snslogo.png";
+$img4 = "../assets/images/product/big-snslogo.png";
 if ($h_t == '1973') {
     $heading = "Add Product";
     $cb = '<a href="javascript:void(0)" class="btn d-flex-center-a-j bg-main br-15" onclick="add_product()" id="pbtn">

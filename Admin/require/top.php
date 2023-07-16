@@ -52,14 +52,14 @@ if (!isset($_SESSION['IS_LOGIN_ADMIN'])) {
                 <div class="row">
                     <div class="left">
                         <div class="image">
-                            <img src="assets/images/2.jpg" alt="" id="mi" />
+                            <img src="assets/images/snslogo.png" alt="" id="mi" />
                         </div>
                         <div class="imgrow">
                             <div class="imb" onclick="changeview('assets/images/1.jpg')">
                                 <img src="assets/images/1.jpg" alt="" />
                             </div>
-                            <div class="imb" onclick="changeview('assets/images/2.jpg')">
-                                <img src="assets/images/2.jpg" alt="" />
+                            <div class="imb" onclick="changeview('assets/images/snslogo.png')">
+                                <img src="assets/images/snslogo.png" alt="" />
                             </div>
                         </div>
                         <div class="namebox">
@@ -125,7 +125,7 @@ if (!isset($_SESSION['IS_LOGIN_ADMIN'])) {
         <div class="mainbody-wrapper">
             <div class="navigation">
                 <div class="photo">
-                    <img src="assets/images/2.jpg" alt="admin photo" />
+                    <img src="assets/images/snslogo.png" alt="admin photo" />
                 </div>
                 <div class="top">
                     <h2>Welcome</h2>

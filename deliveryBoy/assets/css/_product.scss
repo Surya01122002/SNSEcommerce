@@ -21,8 +21,8 @@
         a {
           min-width: 110px;
           padding: 1rem 0;
-          background-color: #42389d;
-          border-color: #42389d;
+          background-color: #2fc202;
+          border-color: #2fc202;
           color: $white;
           border-radius: 15px;
           display: flex;
@@ -31,7 +31,7 @@
           font-weight: 1.4px;
           font-weight: 700;
           &:focus {
-            box-shadow: 0 0 0 0.2rem #42389d80;
+            box-shadow: 0 0 0 0.2rem #2fc20280;
           }
           &:hover {
             background-color: #2a2465;
@@ -88,7 +88,7 @@
                   }
                 }
                 .view {
-                  background-color: #42389d;
+                  background-color: #2fc202;
                 }
                 .edit {
                   background-color: #43dc80;

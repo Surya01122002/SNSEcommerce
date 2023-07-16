@@ -51,7 +51,7 @@ require('require/top.php');
                 </div>
             </div>
             <div class="formrow">
-                <span id='pdstatus' style='font-size:1.3rem; color:#556ee6;'></span>
+                <span id='pdstatus' style='font-size:1.3rem; color:#ff8a00;'></span>
                 <button class='add' onclick='add_neew_dv()'>
                     <i class='fa fa-plus' aria-hidden='true'></i>
                     Add</button>

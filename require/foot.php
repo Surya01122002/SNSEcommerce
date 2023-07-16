@@ -12,7 +12,7 @@
                     <li>
                         <a href="#">
                             <i class="uil uil-envelope-alt"></i>
-                            info@SNS Ecommerce.com
+                            info@snsecommerce.com
                         </a>
                     </li>
                 </ul>
@@ -49,6 +49,7 @@
                         <h4>Categories</h4>
                     </li>
                     <ul class="ul-sub">
+                        <li>Mobiles</li>
                         <li>Fruits and Vegetables</li>
                         <li>Grocery & Staples</li>
                         <li>Dairy & Eggs</li>
@@ -66,13 +67,13 @@
                         <h4>Usefull Links</h4>
                     </li>
                     <ul class="ul-sub">
-                        <li>Fruits and Vegetables</li>
+                        <!-- <li>Fruits and Vegetables</li>
                         <li>Dairy & Eggs</li>
                         <li>Beverages</li>
                         <li>Snacks</li>
                         <li>Snacks</li>
                         <li>Beverages</li>
-                        <li>Snacks</li>
+                        <li>Snacks</li> -->
                     </ul>
                 </ul>
                 <ul class="ul1">
@@ -80,14 +81,14 @@
                         <h4>Top Cities</h4>
                     </li>
                     <ul class="ul-sub">
-                        <li>Fruits and Vegetables</li>
-                        <li>Grocery & Staples</li>
+                        <li>Coimbatore</li>
+                        <!-- <li>Grocery & Staples</li>
                         <li>Snacks</li>
                         <li>Fruits and</li>
                         <li>Grocery & Staples</li>
                         <li>Dairy & Eggs</li>
                         <li>Beverages</li>
-                        <li>Snacks</li>
+                        <li>Snacks</li> -->
                     </ul>
                 </ul>
                 <ul class="ul1">

@@ -49,7 +49,7 @@ $o = mysqli_fetch_assoc(mysqli_query($con, "select * from seller_wallet where se
                 </div>
             </div>
             <div class="formrow">
-                <span id='pdstatus' style='font-size:1.3rem; color:#556ee6;'></span>
+                <span id='pdstatus' style='font-size:1.3rem; color:#ff8a00;'></span>
                 <button class='add' onclick="manual_add(<?php echo $id; ?>)">
                     Update</button>
             </div>

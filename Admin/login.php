@@ -60,7 +60,7 @@ if (isset($_SESSION['IS_LOGIN_ADMIN'])) {
                                 <input id="seller_password" type="password" placeholder="Password" class="form-control bg-white border-left-0 border-md" />
                             </div>
                             <div class="form-group col-lg-12 mx-auto mb-3">
-                                <input class="btn btn-block py-2 font-weight-bold" id="seller_login" value="Submit" style="background-color: #556ee6; color: #fff;" onclick="checklogin()" readonly />
+                                <input class="btn btn-block py-2 font-weight-bold" id="seller_login" value="Submit" style="background-color: #ff8a00; color: #fff;" onclick="checklogin()" readonly />
                             </div>
                         </div>
                     </form>

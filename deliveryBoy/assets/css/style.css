@@ -41,7 +41,7 @@ button {
   padding: 0.7rem 1.2rem;
   font-size: 1.2rem;
   border-radius: 0.48rem;
-  background-color: #42389d;
+  background-color: #2fc202;
   color: #fff;
   cursor: pointer;
 }
@@ -173,7 +173,7 @@ a.btn {
 }
 
 .bg-main {
-  background-color: #42389d;
+  background-color: #2fc202;
   color: #fff;
 }
 
@@ -240,7 +240,7 @@ a.btn {
   min-height: 100vh;
   -webkit-transition: 0.5s !important;
   transition: 0.5s !important;
-  background-color: #42389d;
+  background-color: #2fc202;
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
 }
@@ -283,8 +283,8 @@ a.btn {
   position: absolute;
   display: none;
   right: -7.5%;
-  border: 1px solid #42389d;
-  background-color: #42389d;
+  border: 1px solid #2fc202;
+  background-color: #2fc202;
   color: #fff;
 }
 
@@ -341,8 +341,8 @@ a.btn {
 .main .left-part .list-nav .nav-list .outer-list:hover a {
   color: #fff;
   background: #554abe !important;
-  -webkit-box-shadow: 0 12px 15px 0 #42389d21;
-          box-shadow: 0 12px 15px 0 #42389d21;
+  -webkit-box-shadow: 0 12px 15px 0 #2fc20221;
+          box-shadow: 0 12px 15px 0 #2fc20221;
 }
 
 .main .left-part .copyright {
@@ -377,7 +377,7 @@ a.btn {
 }
 
 .main .right-part .path .container a {
-  color: #42389d;
+  color: #2fc202;
   font-weight: 700;
   text-transform: capitalize;
 }
@@ -425,8 +425,8 @@ a.btn {
 
 .main .right-part .head .ham-name .mnu span {
   width: 100%;
-  border: 1px solid #42389d;
-  background-color: #42389d;
+  border: 1px solid #2fc202;
+  background-color: #2fc202;
   height: 0.3rem;
   margin: 0.2rem 0;
 }
@@ -606,7 +606,7 @@ a.btn {
 }
 
 .main .right-part .row .col-xxl-6 .card .bg-primary {
-  background-color: #42389d !important;
+  background-color: #2fc202 !important;
 }
 
 .main .right-part .row .col-xxl-6 .card .bg-info {
@@ -664,7 +664,7 @@ a.btn {
     min-height: 100%;
     -webkit-transition: 0.5s !important;
     transition: 0.5s !important;
-    background-color: #42389d;
+    background-color: #2fc202;
     position: absolute;
     z-index: 9;
     width: 28rem;
@@ -705,8 +705,8 @@ a.btn {
   .main .left-part .list-nav .nav-list .outer-list:hover a {
     color: #fff;
     background: #554abe !important;
-    -webkit-box-shadow: 0 12px 15px 0 #42389d21;
-            box-shadow: 0 12px 15px 0 #42389d21;
+    -webkit-box-shadow: 0 12px 15px 0 #2fc20221;
+            box-shadow: 0 12px 15px 0 #2fc20221;
   }
   .main .left-part .copyright {
     font-size: 12px;
@@ -783,8 +783,8 @@ a.btn {
 .right-part .cartrow .gh .heading a {
   min-width: 110px;
   padding: 1rem 0;
-  background-color: #42389d;
-  border-color: #42389d;
+  background-color: #2fc202;
+  border-color: #2fc202;
   color: #fff;
   border-radius: 15px;
   display: -webkit-box;
@@ -801,8 +801,8 @@ a.btn {
 }
 
 .right-part .cartrow .gh .heading a:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem #42389d80;
-          box-shadow: 0 0 0 0.2rem #42389d80;
+  -webkit-box-shadow: 0 0 0 0.2rem #2fc20280;
+          box-shadow: 0 0 0 0.2rem #2fc20280;
 }
 
 .right-part .cartrow .gh .heading a:hover {
@@ -885,7 +885,7 @@ a.btn {
 }
 
 .right-part .cartrow .gh .maincontainer table tbody td .acn .view {
-  background-color: #42389d;
+  background-color: #2fc202;
 }
 
 .right-part .cartrow .gh .maincontainer table tbody td .acn .edit {
@@ -1385,8 +1385,8 @@ a.btn {
 
 .single-product .row .container .innerrow .right .product-group-dt .ordr-crt-share li .order-btn {
   background: 0 0;
-  border: 1px solid #42389d;
-  color: #42389d;
+  border: 1px solid #2fc202;
+  color: #2fc202;
   height: 40px;
   padding: 0 20px;
   font-family: roboto, sans-serif;
@@ -1395,7 +1395,7 @@ a.btn {
 }
 
 .single-product .row .container .innerrow .right .product-group-dt .ordr-crt-share li .order-btn:hover {
-  background-color: #42389d;
+  background-color: #2fc202;
   color: #fff;
 }
 
@@ -1641,7 +1641,7 @@ a.btn {
 }
 
 .pdpt-bg .main-total-cart span {
-  color: #42389d;
+  color: #2fc202;
   font-size: 18px;
   margin-left: auto;
   font-weight: 700;

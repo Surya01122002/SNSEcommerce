@@ -28,11 +28,11 @@ $ach = '';
 $bank = '';
 $branch = '';
 $ifsc = '';
-$b_sc = "../assets/images/product/big-2.jpg";
-$g_sc = "../assets/images/product/big-2.jpg";
-$a_sc = "../assets/images/product/big-2.jpg";
-$p_sc = "../assets/images/product/big-2.jpg";
-$family_sc = "../assets/images/product/big-2.jpg";
+$b_sc = "../assets/images/product/big-snslogo.png";
+$g_sc = "../assets/images/product/big-snslogo.png";
+$a_sc = "../assets/images/product/big-snslogo.png";
+$p_sc = "../assets/images/product/big-snslogo.png";
+$family_sc = "../assets/images/product/big-snslogo.png";
 $query = "select * from sellers where id='$sid'";
 $seller_res = mysqli_query($con, $query);
 $seller_row = mysqli_fetch_assoc($seller_res);
@@ -84,7 +84,7 @@ if ($is_approve == 2 && $cp == 2 || isset($_GET['rt'])) {
         </div>
         <div class="maincontainer2">
             <form action="#">
-                <h1 style="color:#556ee6" class="mt3">Basic Details</h1>
+                <h1 style="color:#ff8a00" class="mt3">Basic Details</h1>
                 <div class="formrow">
                     <div class="heading">Full Name</div>
                     <input type="text" placeholder="Enter Your Full Name" id="seller_full_name"
@@ -105,7 +105,7 @@ if ($is_approve == 2 && $cp == 2 || isset($_GET['rt'])) {
                     <input type="text" placeholder="Enter Address" id="address"
                         value="<?php echo $seller_row['address']; ?>">
                 </div>
-                <h1 style="color:#556ee6" class="mt3">SNS Family Relationship</h1>
+                <h1 style="color:#ff8a00" class="mt3">SNS Family Relationship</h1>
                 <div class="formrow">
                     <div class="heading">Relationship</div>
                     <?php if ($city == '') { ?>
@@ -128,7 +128,7 @@ if ($is_approve == 2 && $cp == 2 || isset($_GET['rt'])) {
                         value="<?php echo $seller_clg_reg_number; ?>">
                 </div>
 
-                <h1 style="color:#556ee6" class="mt3">Business Details</h1>
+                <h1 style="color:#ff8a00" class="mt3">Business Details</h1>
                 <div class="formrow">
                     <div class="heading">Type</div>
                     <select class="select" name="addscatname" id="seller_b_type">
@@ -275,7 +275,7 @@ if ($is_approve == 2 && $cp == 2 || isset($_GET['rt'])) {
                         value="<?php echo $gstnum; ?>" />
                 </div>
                 <?php } ?>
-                <h1 style="color:#556ee6" class="mt3">Bank Details</h1>
+                <h1 style="color:#ff8a00" class="mt3">Bank Details</h1>
                 <div class="formrow">
                     <div class="heading">Account Number</div>
                     <input type="number" placeholder="Enter bank account number *" id="seller_ac"
@@ -301,7 +301,7 @@ if ($is_approve == 2 && $cp == 2 || isset($_GET['rt'])) {
                     <input type="text" id="seller_ifsc" placeholder="Enter IFSC code *" value="<?php echo $ifsc; ?>" />
                 </div>
 
-                <h1 style="color:#556ee6" class="mt3">Upload Documents</h1>
+                <h1 style="color:#ff8a00" class="mt3">Upload Documents</h1>
                 <div class="formrow ig" style="margin-top:3rem">
                     <div class="imgdiv">
                         <div class="img">

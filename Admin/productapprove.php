@@ -18,7 +18,7 @@ while ($g = mysqli_fetch_assoc($r)) {
             <input type="text" placeholder="Search by Name" id="sfield" onkeyup="search('sfield','p_name')" />
             <div style="display:none;width:0rem;transition:0.8s;" id="reasonbox">
                 <input type="text" placeholder="Enter Reason" id="sfield2" />
-                <button style="background:#556ee6;color:white;padding:0 0.5rem;margin-left:0.8rem;border-radius:5px;">Submit</button>
+                <button style="background:#ff8a00;color:white;padding:0 0.5rem;margin-left:0.8rem;border-radius:5px;">Submit</button>
             </div>
         </div>
     </div>

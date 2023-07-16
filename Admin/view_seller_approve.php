@@ -16,7 +16,7 @@ $is_gst = $row['is_gst'];
     <div class="headrow">
         <div class="wrap" style="height: 30rem;">
             <div class="pp">
-                <img src="assets/images/2.jpg" alt="" />
+                <img src="assets/images/snslogo.png" alt="" />
             </div>
             <div class="detail">
                 <h3><?php echo $row['f_name']; ?></h3>

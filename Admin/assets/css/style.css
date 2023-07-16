@@ -103,7 +103,7 @@ body .floatwrap .cataddbox .ndr select {
 body .floatwrap .cataddbox .ndr button {
   width: 99%;
   padding: 0.8rem;
-  background-color: #556ee6;
+  background-color: #ff8a00;
   color: #fff;
   margin-top: 2rem;
   -webkit-transition: 0.2s;
@@ -122,7 +122,7 @@ body .floatwrap .cataddbox .nm {
 body .floatwrap .cataddbox .nm button {
   border-radius: 4px;
   padding: 0.8rem;
-  background-color: #556ee6;
+  background-color: #ff8a00;
   color: #fff;
   float: right;
 }
@@ -266,7 +266,7 @@ body .floatwrap .productview .row .right .btnrow button {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 5px;
-  background-color: #556ee6;
+  background-color: #ff8a00;
   color: #fff;
 }
 
@@ -300,7 +300,7 @@ body .floatwrap .updatebalance .row2 {
 }
 
 body .floatwrap .updatebalance .row2 input {
-  border: 0.2px solid #556ee6;
+  border: 0.2px solid #ff8a00;
   width: 70%;
   height: 3rem;
   border-radius: 4px;
@@ -309,7 +309,7 @@ body .floatwrap .updatebalance .row2 input {
 
 body .floatwrap .updatebalance .row2 button {
   margin-left: 0.6rem;
-  background-color: #556ee6;
+  background-color: #ff8a00;
   color: #fff;
   border-radius: 4px;
   height: 3rem;
@@ -446,7 +446,7 @@ body .mainbody-wrapper .navigation ul a li {
 }
 
 body .mainbody-wrapper .navigation ul a li:hover {
-  color: #556ee6;
+  color: #ff8a00;
 }
 
 body .mainbody-wrapper .workspace {
@@ -518,7 +518,7 @@ body .mainbody-wrapper .workspace .wrwr .path {
 
 body .mainbody-wrapper .workspace .wrwr .path a,
 body .mainbody-wrapper .workspace .wrwr .path span {
-  color: #2810d6;
+  color: #ff8a00;
 }
 
 body .mainbody-wrapper .workspace .wrwr .row {
@@ -879,7 +879,7 @@ body .mainbody-wrapper .workspace .wrwr .row .box .bspace .p_row .p_action butto
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #556ee6;
+  background-color: #ff8a00;
   color: #fff;
 }
 
@@ -905,7 +905,7 @@ body .mainbody-wrapper .workspace .wrwr .row .card::after {
   width: 12rem;
   left: -18%;
   top: -11%;
-  background-color: rgba(85, 110, 230, 0.8);
+  background-color: #ff8a00;
   border-radius: 50%;
 }
 
@@ -1036,7 +1036,7 @@ body .mainbody-wrapper .workspace .wrwr .rowbtn .b select {
 
 body .mainbody-wrapper .workspace .wrwr .rowbtn .b .add {
   padding: 1rem 2rem;
-  background-color: #556ee6;
+  background-color: #ff8a00;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1328,7 +1328,7 @@ body .mainbody-wrapper .workspace .wrwr .catbox-row .catbox .bspace .detailrow .
 
 body .mainbody-wrapper .workspace .wrwr .catbox-row .catbox .bspace .detailrow .action button {
   padding: 0.88rem;
-  background-color: #556ee6;
+  background-color: #ff8a00;
   color: #fff;
   border-radius: 8px;
   display: -webkit-box;
@@ -1523,7 +1523,7 @@ body .mainbody-wrapper .workspace .wrwr .catbox-row .catbox .bspace .p_row .p_ac
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #556ee6;
+  background-color: #ff8a00;
   color: #fff;
 }
 
@@ -1623,7 +1623,7 @@ body .mainbody-wrapper .workspace .wrwr .catbox-row .catbox .bspace .head .actio
   height: 3rem;
   width: 8rem;
   border-radius: 5px;
-  background-color: #556ee6;
+  background-color: #ff8a00;
   color: #fff;
 }
 
@@ -1849,7 +1849,7 @@ body .mainbody-wrapper .workspace .wrwr .catbox-row .catbox .partrow .partition 
 body .mainbody-wrapper .workspace .wrwr .catbox-row .catbox .partrow .partition .addingbx .cbox button {
   width: 100%;
   padding: 0.7rem 0.6rem;
-  background-color: #556ee6;
+  background-color: #ff8a00;
   color: #fff;
 }
 
@@ -1907,7 +1907,7 @@ body .mainbody-wrapper .workspace .wrwr .catbox-row .catboxp .formrow .catselect
 
 body .mainbody-wrapper .workspace .wrwr .catbox-row .catboxp .formrow .catselect button {
   margin-left: 1rem;
-  background-color: #556ee6;
+  background-color: #ff8a00;
   color: white;
   padding: 0 0.9rem;
   border-radius: 5px;
@@ -2001,7 +2001,7 @@ body .mainbody-wrapper .workspace .wrwr .catbox-row .catboxp .formrow .desc {
 
 body .mainbody-wrapper .workspace .wrwr .catbox-row .catboxp .formrow .add {
   padding: 0.9rem 1.5rem;
-  background-color: #556ee6;
+  background-color: #ff8a00;
   border-radius: 6px;
   color: #fff;
 }
@@ -2053,7 +2053,7 @@ body .mainbody-wrapper .workspace .wrwr .headrow .wrap .detail p {
 }
 
 body .mainbody-wrapper .workspace .wrwr .headrow .wrap .detail .upw {
-  background-color: #556ee6;
+  background-color: #ff8a00;
   color: #fff;
   margin-top: 2rem;
   padding: 0.8rem 2rem;
@@ -2088,7 +2088,7 @@ body .mainbody-wrapper .workspace .wrwr .row_a button {
           align-items: center;
   border-radius: 4px;
   margin: 0 0.8rem;
-  background-color: #556ee6;
+  background-color: #ff8a00;
   color: #fff;
 }
 
@@ -2097,7 +2097,7 @@ body .mainbody-wrapper .workspace .wrwr .row_a button i {
 }
 
 #msg {
-  color: #556ee6;
+  color: #ff8a00;
 }
 
 .block i {

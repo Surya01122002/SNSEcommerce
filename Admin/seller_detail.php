@@ -24,7 +24,7 @@ $is_gst = $row['is_gst'];
     <div class="headrow">
         <div class="wrap" style="height: 30rem;">
             <div class="pp">
-                <img src="assets/images/2.jpg" alt="" />
+                <img src="assets/images/snslogo.png" alt="" />
             </div>
             <div class="detail">
                 <h3><?php echo $row['f_name']; ?></h3>
@@ -91,8 +91,8 @@ $is_gst = $row['is_gst'];
             ?>
                 <div class="detail" style="margin-bottom:4rem">
                     <h3>Requested: &#8377;<span><?php echo $o['amount_r']; ?></span></h3>
-                    <button style="background:#556ee6;color:#fff; padding:0.8rem; border-radius:5px" onclick="redirect_to('txn.php?sid=<?php echo $id;  ?>')">Approve Request</button>
-                    <button style="background:#556ee6;color:#fff; padding:0.8rem; border-radius:5px" onclick="reject_req(<?php echo $id;  ?>)">Reject</button>
+                    <button style="background:#ff8a00;color:#fff; padding:0.8rem; border-radius:5px" onclick="redirect_to('txn.php?sid=<?php echo $id;  ?>')">Approve Request</button>
+                    <button style="background:#ff8a00;color:#fff; padding:0.8rem; border-radius:5px" onclick="reject_req(<?php echo $id;  ?>)">Reject</button>
                 </div>
             <?php } ?>
         </div>

@@ -29,7 +29,7 @@ $o = mysqli_fetch_assoc(mysqli_query($con, "select * from witdraw_req where s_id
                 </div>
             </div>
             <div class="formrow">
-                <span id='pdstatus' style='font-size:1.3rem; color:#556ee6;'></span>
+                <span id='pdstatus' style='font-size:1.3rem; color:#ff8a00;'></span>
                 <button class='add' onclick="approve_req(<?php echo $id; ?>)">
                     Approve</button>
             </div>

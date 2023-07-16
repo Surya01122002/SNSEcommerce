@@ -119,7 +119,7 @@ while ($rt = mysqli_fetch_assoc($rs)) {
                                                 <button style="height: 3.2rem;
                                 width: 8rem;
                                 border-radius: 5px;
-                                background-color: #556ee6;
+                                background-color: #ff8a00;
                                 color: #fff;" onclick="
                                     ship_product('<?php echo $p['id']; ?>','<?php echo $shipid ?>','<?php echo $shipnameid ?>')">Submit</button>
                                             </td>
@@ -135,7 +135,7 @@ while ($rt = mysqli_fetch_assoc($rs)) {
                                                 <button style="height: 3.2rem;
                                 width: 8rem;
                                 border-radius: 5px; 
-                                background-color: #556ee6;
+                                background-color: #ff8a00;
                                 color: #fff;" onclick="
                                     ship_product('<?php echo $p['id']; ?>','<?php echo $shipid ?>','<?php echo $shipnameid ?>')">Delivered</button>
                                             </td>
@@ -143,7 +143,7 @@ while ($rt = mysqli_fetch_assoc($rs)) {
                                                 <button style="height: 3.2rem;
                                 width: 8rem;
                                 border-radius: 5px;
-                                background-color: #556ee6;
+                                background-color: #ff8a00;
                                 color: #fff;" onclick="ship_product('<?php echo $p['id']; ?>','<?php echo $shipid ?>','<?php echo $shipnameid ?>')">Undelivered</button>
                                             </td>
                                             <td style="border-bottom:1px solid #e2e2e2;"></td>
@@ -242,7 +242,7 @@ while ($rt = mysqli_fetch_assoc($rs)) {
                                     <button style="height: 3.2rem;
                                 width: 8rem;
                                 border-radius: 5px;
-                                background-color: #556ee6;
+                                background-color: #ff8a00;
                                 color: #fff;" onclick="pay('<?php echo $order_detail_id[$h]; ?>','<?php echo $cd; ?>')">Pay</button>
                                 <?php
                                                                                 }

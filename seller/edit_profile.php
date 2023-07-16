@@ -46,7 +46,7 @@ $ifsc = $seller_row['ifsc'];
         </div>
         <div class="maincontainer2">
             <form action="#">
-                <h1 style="color:#556ee6" class="mt3">Basic Details</h1>
+                <h1 style="color:#ff8a00" class="mt3">Basic Details</h1>
                 <div class="formrow">
                     <div class="heading">Full Name</div>
                     <input type="text" placeholder="Enter Your Full Name" id="seller_full_name" value="<?php echo $fullname; ?>">
@@ -63,7 +63,7 @@ $ifsc = $seller_row['ifsc'];
                     <div class="heading">Address </div>
                     <input type="text" placeholder="Enter Mobile Number" id="address" value="<?php echo $seller_row['address']; ?>">
                 </div>
-                <h1 style="color:#556ee6" class="mt3">Business Details</h1>
+                <h1 style="color:#ff8a00" class="mt3">Business Details</h1>
                 <div class="formrow">
                     <div class="heading">Type</div>
                     <select class="select" name="addscatname" id="seller_b_type">
@@ -207,7 +207,7 @@ $ifsc = $seller_row['ifsc'];
                         <input type="text" placeholder="Enter GST number *" id="seller_gst_num" value="<?php echo $gstnum; ?>" />
                     </div>
                 <?php } ?>
-                <h1 style="color:#556ee6" class="mt3">Bank Details</h1>
+                <h1 style="color:#ff8a00" class="mt3">Bank Details</h1>
                 <div class="formrow">
                     <div class="heading">Account Number</div>
                     <input type="number" placeholder="Enter bank account number *" id="seller_ac" value="<?php echo $acn; ?>" />

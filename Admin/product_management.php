@@ -25,10 +25,10 @@ $repref = '';
 $shipping = '';
 $shippingex = '';
 $sku = get_code();
-$img1 = "assets/images/2.jpg";
-$img2 = "assets/images/2.jpg";
-$img3 = "assets/images/2.jpg";
-$img4 = "assets/images/2.jpg";
+$img1 = "assets/images/snslogo.png";
+$img2 = "assets/images/snslogo.png";
+$img3 = "assets/images/snslogo.png";
+$img4 = "assets/images/snslogo.png";
 if ($h_t == '1973') {
     $heading = "Add Product";
     $cb = "<button class='add' onclick='add_product()' id='pbtn'>
@@ -396,7 +396,7 @@ if ($h_t == '1973') {
                 <textarea class="desc" name="dsc" id="dsc" placeholder="Description *"><?php echo $dc; ?></textarea>
             </div>
             <div class="formrow">
-                <span id='pdstatus' style='font-size:1.3rem; color:#556ee6;'></span>
+                <span id='pdstatus' style='font-size:1.3rem; color:#ff8a00;'></span>
                 <?php echo $cb; ?>
             </div>
         </div>
