@@ -47,6 +47,14 @@ Our meticulous admin team ensures a smooth shopping experience for you:
 - **Create/Manage Sellers or Users:** We value our sellers and users, ensuring smooth operations for all.
 - **Create/Manage Orders:** Our admin team handles orders efficiently, ensuring timely deliveries.
 
+#### **Admin Credentials**
+To access the Admin Module, please use the following credentials:
+
+- **Email:** admin@gmail.com
+- **Password:** 123456
+
+Please keep these credentials safe and do not share them with unauthorized individuals.
+
 ## **Conclusion** 🎯
 The 🌟 **SNS Ecommerce Application** 🛍️ offers a delightful shopping experience for members of the 🎓 ***SNS Family***. Moreover, it warmly welcomes users from all walks of life, providing them with access to a wide variety of products and services. As part of our unique initiative, only ***SNS Family*** members can become sellers on the platform, offering exclusive products and services.
 
