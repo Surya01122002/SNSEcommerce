@@ -49,14 +49,7 @@ require('require/top.php');
             </div>
         </div>
     </div>
-    <div class="row" style="
-              display: block;
-              margin-bottom: 2rem;
-              font-size: 1.2rem;
-              color: #6a7187;
-            ">
-        @ Developed by Surya Ramesh
-    </div>
+    
 </div>
 <?php
 require('require/foot.php');

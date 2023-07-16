@@ -29,34 +29,28 @@ require('require/top.php');
                 $i = 1;
                 while ($row = mysqli_fetch_assoc($res)) {
                 ?>
-                    <div class="p_row">
-                        <div class="slno"><?php echo $i;
+                <div class="p_row">
+                    <div class="slno"><?php echo $i;
                                             $i++; ?></div>
-                        <div class="p_name"><?php echo $row['o_id']; ?></div>
-                        <div class="p_status">
-                            <span class="active_span"><?php
+                    <div class="p_name"><?php echo $row['o_id']; ?></div>
+                    <div class="p_status">
+                        <span class="active_span"><?php
                                                         echo $row['o_status'];
                                                         ?></span>
-                        </div>
-                        <div class="date"><?php echo $row['added_on']; ?></div>
-                        <div class="p_action" style="width: 7rem">
-                            <button class="edit" onclick="redirect_to('showOrderDetail__.php?id=<?php echo $row['id']; ?>')">
-                                <i class="fa fa-wifi" aria-hidden="true"></i>View
-                            </button>
-                        </div>
                     </div>
+                    <div class="date"><?php echo $row['added_on']; ?></div>
+                    <div class="p_action" style="width: 7rem">
+                        <button class="edit"
+                            onclick="redirect_to('showOrderDetail__.php?id=<?php echo $row['id']; ?>')">
+                            <i class="fa fa-wifi" aria-hidden="true"></i>View
+                        </button>
+                    </div>
+                </div>
                 <?php } ?>
             </div>
         </div>
     </div>
-    <div class="row" style="
-              display: block;
-              margin-bottom: 2rem;
-              font-size: 1.2rem;
-              color: #6a7187;
-            ">
-        @ Developed by Surya Ramesh
-    </div>
+
 </div>
 <?php
 require('require/foot.php');

@@ -63,14 +63,7 @@ require('require/top.php');
             <span style="font-size:1.2rem;margin-top:0.8rem;" id="erm"></span>
         </div>
     </div>
-    <div class="row" style="
-              display: block;
-              margin-bottom: 2rem;
-              font-size: 1.2rem;
-              color: #6a7187;
-            ">
-        @ Developed by Surya Ramesh
-    </div>
+    
 </div>
 
 <?php

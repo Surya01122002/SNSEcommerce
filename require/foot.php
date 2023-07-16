@@ -149,9 +149,6 @@
             </div>
         </div>
     </div>
-    <div class="footer-3">
-        <span> Developed by Surya Ramesh</span>
-    </div>
 </section>
 <script src="assets/js/script.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>

@@ -75,14 +75,7 @@ require('require/top.php');
             <div class="sd" id="piechart"></div>
         </div>
     </div>
-    <div class="row" style="
-              display: block;
-              margin-bottom: 2rem;
-              font-size: 1.2rem;
-              color: #6a7187;
-            ">
-        @ Developed by Surya Ramesh
-    </div>
+    
 </div>
 <script type="text/javascript">
     google.charts.load("current", {

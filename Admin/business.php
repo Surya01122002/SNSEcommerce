@@ -20,13 +20,16 @@ require('require/top.php');
     <div class="rowbtn" style="margin:3rem 0 0 0;" id="filterlist">
         <div class="b" style="display:flex;flex-direction:column;padding:3rem 2rem">
             <div class="row" style="height:3rem; display:flex;justify-content:space-between;">
-                <div class="block" style="width:15rem; font-weight: 600; color:#40464d; font-size:1.6rem; display:flex; justify-content:center; align-items:center;">
+                <div class="block"
+                    style="width:15rem; font-weight: 600; color:#40464d; font-size:1.6rem; display:flex; justify-content:center; align-items:center;">
                     Slno
                 </div>
-                <div class="block" style="width:15rem; font-weight: 600; color:#40464d; font-size:1.6rem; display:flex; justify-content:center; align-items:center;">
+                <div class="block"
+                    style="width:15rem; font-weight: 600; color:#40464d; font-size:1.6rem; display:flex; justify-content:center; align-items:center;">
                     Business Type
                 </div>
-                <div class="block" style="width:15rem; font-weight: 600; color:#40464d; font-size:1.6rem; display:flex; justify-content:center; align-items:center;">
+                <div class="block"
+                    style="width:15rem; font-weight: 600; color:#40464d; font-size:1.6rem; display:flex; justify-content:center; align-items:center;">
                     Action
                 </div>
             </div>
@@ -37,29 +40,24 @@ require('require/top.php');
         $i = 1;
         while ($rowt = mysqli_fetch_assoc($res2)) {
         ?>
-            <div class="b" style="display:flex;flex-direction:column;padding:0.4rem 2rem">
-                <div class="row" style="height:3rem; display:flex;justify-content:space-between;">
-                    <div class="block" style="width:15rem; display:flex; justify-content:center; align-items:center;font-size:1.3rem;color:#6a7187;">
-                        <?php echo $i; ?>
-                    </div>
-                    <div class="block" style="width:15rem; display:flex; justify-content:center; align-items:center;font-size:1.3rem;color:#6a7187;">
-                        <?php echo $rowt['type']; ?>
-                    </div>
-                    <div class="block" style="width:15rem; display:flex; justify-content:center; align-items:center;font-size:1.3rem;color:#6a7187;">
-                        <i class="fa fa-trash" aria-hidden="true" onclick="deletebusiness(<?php echo $rowt['id']; ?>)"></i>
-                    </div>
+        <div class="b" style="display:flex;flex-direction:column;padding:0.4rem 2rem">
+            <div class="row" style="height:3rem; display:flex;justify-content:space-between;">
+                <div class="block"
+                    style="width:15rem; display:flex; justify-content:center; align-items:center;font-size:1.3rem;color:#6a7187;">
+                    <?php echo $i; ?>
+                </div>
+                <div class="block"
+                    style="width:15rem; display:flex; justify-content:center; align-items:center;font-size:1.3rem;color:#6a7187;">
+                    <?php echo $rowt['type']; ?>
+                </div>
+                <div class="block"
+                    style="width:15rem; display:flex; justify-content:center; align-items:center;font-size:1.3rem;color:#6a7187;">
+                    <i class="fa fa-trash" aria-hidden="true" onclick="deletebusiness(<?php echo $rowt['id']; ?>)"></i>
                 </div>
             </div>
+        </div>
         <?php $i++;
         } ?>
-    </div>
-    <div class="row" style="
-              display: block;
-              margin-bottom: 2rem;
-              font-size: 1.2rem;
-              color: #6a7187;
-            ">
-        @ Developed by Surya Ramesh
     </div>
 </div>
 

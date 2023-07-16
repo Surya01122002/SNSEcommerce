@@ -50,45 +50,37 @@ require('require/top.php');
             ";
                     }
                 ?>
-                    <div class="detailrow">
-                        <div class="sl"><?php echo $i; ?></div>
-                        <div class="catname"><?php echo $row['category']; ?></div>
-                        <?php
+                <div class="detailrow">
+                    <div class="sl"><?php echo $i; ?></div>
+                    <div class="catname"><?php echo $row['category']; ?></div>
+                    <?php
                         $nm = $row['id'];
                         $q = "select * from subcategories where cat_id='$nm'";
                         $r = mysqli_query($con, $q);
                         $nor = mysqli_num_rows($r);
                         ?>
-                        <div class="nos"><?php echo $nor; ?></div>
-                        <div class="status">
-                            <span class="active_span">
-                                <?php echo $st; ?>
-                            </span>
-                        </div>
-                        <div class="action">
-                            <button class="edit" onclick="editcat(<?php echo $row['id']; ?>)">
-                                <i class="fa fa-pen" aria-hidden="true"></i>Edit
-                            </button>
-                            <?php echo $cb; ?>
-                            <button class="delete" onclick="catdelete(<?php echo $row['id']; ?>)">
-                                <i class="fa fa-trash" aria-hidden="true"></i>Delete
-                            </button>
-                        </div>
+                    <div class="nos"><?php echo $nor; ?></div>
+                    <div class="status">
+                        <span class="active_span">
+                            <?php echo $st; ?>
+                        </span>
                     </div>
+                    <div class="action">
+                        <button class="edit" onclick="editcat(<?php echo $row['id']; ?>)">
+                            <i class="fa fa-pen" aria-hidden="true"></i>Edit
+                        </button>
+                        <?php echo $cb; ?>
+                        <button class="delete" onclick="catdelete(<?php echo $row['id']; ?>)">
+                            <i class="fa fa-trash" aria-hidden="true"></i>Delete
+                        </button>
+                    </div>
+                </div>
                 <?php
                     $i++;
                 }
                 ?>
             </div>
         </div>
-    </div>
-    <div class="row" style="
-              display: block;
-              margin-bottom: 2rem;
-              font-size: 1.2rem;
-              color: #6a7187;
-            ">
-        @ Developed by Surya Ramesh
     </div>
 </div>
 
